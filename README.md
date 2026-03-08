@@ -34,6 +34,9 @@ Para simular y cargar el proyecto en el FPGA, sigue estos pasos:
    - Conecta el FPGA a un monitor mediante un cable VGA.
    - Los semáforos y el estado de la máquina de estados se mostrarán en la pantalla.
 
+**Notas técnicas:**
+- En Verilog, **el uso de `initial begin` no es compatible con la mayoría de los FPGA**, ya que esta función se utiliza principalmente para simulaciones. Sin embargo, con el FPGA **DE10-Lite** se ha logrado compilar correctamente utilizando esta sintaxis, pero asegúrate de verificar las restricciones de tu FPGA si trabajas en otro modelo.
+
 ## Uso
 
 - **Máquina de estados**: El proyecto gestiona el tráfico de una rotonda con 4 semáforos para vehículos y 4 para peatones. Los semáforos cambian de color según el estado actual de la máquina de estados.
